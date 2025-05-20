@@ -8,6 +8,6 @@ cloudinary.v2.config({
 })
 
 
-app.listen(4000, () => {
-    console.log(`Server is running at port ${4000}`)
+app.listen(3000, () => {
+    console.log(`Server is running at port ${process.env.PORT}`)
 })
