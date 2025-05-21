@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const dbConnection = () => {
-    mongoose.connect(mongodb+srv://shah:shah@cluster0.dcr4b.mongodb.net/jobportal?retryWrites=true&w=majority, {
+    mongoose.connect(process.env.MONGO_URL, {
         dbName: "jobportal"
     }).then(() => {
         console.log("Database Connected")
