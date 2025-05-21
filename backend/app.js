@@ -14,7 +14,7 @@ const app = express()
 config({path: './config/config.env'})
 
 app.use(cors({
-    origin:[process.env.FRONT_END_URL],
+    origin:["https://job-portal-app-frontend-two.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
