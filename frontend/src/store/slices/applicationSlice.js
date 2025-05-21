@@ -85,7 +85,7 @@ export const fetchJobSeekerApplications = () => async (dispatch) => {
   dispatch(applicationSlice.actions.requestForAllApplications());
   try {
     const response = await axios.get(
-      `https://job-portal-app-backend-six.vercel.app/api/v1/application/jobseeker/getall`,
+      "https://job-portal-app-backend-six.vercel.app/api/v1/application/jobseeker/getall",
       {
         withCredentials: true,
       }
@@ -109,7 +109,7 @@ export const fetchEmployerApplications = () => async (dispatch) => {
   dispatch(applicationSlice.actions.requestForAllApplications());
   try {
     const response = await axios.get(
-      `https://job-portal-app-backend-six.vercel.app/api/v1/application/employer/getall`,
+      "https://job-portal-app-backend-six.vercel.app/api/v1/application/employer/getall",
       {
         withCredentials: true,
       }
