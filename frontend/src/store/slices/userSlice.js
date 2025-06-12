@@ -97,7 +97,7 @@ const userSlice = createSlice({
 export const registerUser = (data) => async (dispatch) => {
   dispatch(userSlice.actions.registerRequest());
   try {
-    let link = `http://localhost:3000/api/v1/user/register`;
+    let link = `https://job-portal-app-khaki.vercel.app/api/v1/user/register`;
     const response = await axios.post(link, data, {
       withCredentials: true,
       headers: { "Content-Type": "multipart/form-data" },
@@ -112,7 +112,7 @@ export const registerUser = (data) => async (dispatch) => {
 export const loginUser = (data) => async (dispatch) => {
   dispatch(userSlice.actions.loginRequest());
   try {
-    let link = `http://localhost:3000/api/v1/user/login`;
+    let link = `https://job-portal-app-khaki.vercel.app/api/v1/user/login`;
     const response = await axios.post(link, data, {
       withCredentials: true,
       headers: { "Content-Type": "application/json" },
@@ -126,7 +126,7 @@ export const loginUser = (data) => async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
   try {
-    let link = `http://localhost:3000/api/v1/user/logout`;
+    let link = `https://job-portal-app-khaki.vercel.app/api/v1/user/logout`;
     const { data } = await axios.get(link, { withCredentials: true });
     dispatch(userSlice.actions.logoutSuccess(data.message));
     dispatch(userSlice.actions.clearAllErrors());
@@ -139,7 +139,7 @@ export const getUser = () => async (dispatch) => {
   dispatch(userSlice.actions.fetchUserRequest());
   try {
     const response = await axios.get(
-      `http://localhost:3000/api/v1/user/getuser`,
+      `https://job-portal-app-khaki.vercel.app/api/v1/user/getuser`,
       { withCredentials: true }
     );
     dispatch(userSlice.actions.fetchUserSuccess(response.data.user));

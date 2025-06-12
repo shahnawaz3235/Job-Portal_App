@@ -65,7 +65,7 @@ export const updateProfile = (data) => async(dispatch) => {
 export const updatePassword = (data) => async(dispatch) => {
     dispatch(updateProfileSlice.actions.updatePasswordRequest())
     try {
-        const response = await axios.put(`http://localhost:3000/api/v1/user/update/password`, data, {
+        const response = await axios.put(`https://job-portal-app-khaki.vercel.app/api/v1/user/update/password`, data, {
             withCredentials: true,
             headers: {"Content-Type": "application/json"}
         })
